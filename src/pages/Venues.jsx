@@ -155,7 +155,7 @@ export default function Venues() {
                       Open in Google Maps <ExternalLink className="w-3.5 h-3.5" />
                     </a>
                   </div>
-                  <div className="rounded-2xl overflow-hidden border border-wedding-gold/30 shadow-md relative aspect-video sm:aspect-[21/9] w-full bg-wedding-cream">
+                  <div className="rounded-2xl overflow-hidden border border-wedding-gold/30 shadow-md relative aspect-video sm:aspect-21/9 w-full bg-wedding-cream">
                     <iframe
                       title={`${v.name} Map Location`}
                       src={v.embedIframeUrl}

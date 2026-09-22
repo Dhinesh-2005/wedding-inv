@@ -205,27 +205,27 @@ export default function Invitation() {
 
         {/* View Mode Toggle: Single Pages vs Full Dual-Page Spreads */}
         <div className="flex justify-center mb-6">
-          <div className="inline-flex p-1.5 rounded-2xl bg-[#F8F3E8] border border-[#C9A24A]/40 shadow-xs">
+          <div className="inline-flex p-1.5 rounded-2xl bg-wedding-cream border border-wedding-gold/40 shadow-xs">
             <button
               onClick={() => switchViewMode("pages")}
               className={`flex items-center gap-2 px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all cursor-pointer ${
                 viewMode === "pages"
-                  ? "bg-[#274236] text-[#F8F3E8] shadow-md"
-                  : "text-[#274236]/80 hover:text-[#274236]"
+                  ? "bg-wedding-forest text-wedding-cream shadow-md"
+                  : "text-wedding-forest/80 hover:text-wedding-forest"
               }`}
             >
-              <FileText className="w-4 h-4 text-[#C9A24A]" />
+              <FileText className="w-4 h-4 text-wedding-gold" />
               Single Pages (4 Pages)
             </button>
             <button
               onClick={() => switchViewMode("spreads")}
               className={`flex items-center gap-2 px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all cursor-pointer ${
                 viewMode === "spreads"
-                  ? "bg-[#274236] text-[#F8F3E8] shadow-md"
-                  : "text-[#274236]/80 hover:text-[#274236]"
+                  ? "bg-wedding-forest text-wedding-cream shadow-md"
+                  : "text-wedding-forest/80 hover:text-wedding-forest"
               }`}
             >
-              <Layers className="w-4 h-4 text-[#C9A24A]" />
+              <Layers className="w-4 h-4 text-wedding-gold" />
               Original Full Spreads (2 Spreads)
             </button>
           </div>

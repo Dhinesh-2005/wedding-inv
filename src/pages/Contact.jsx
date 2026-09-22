@@ -64,10 +64,10 @@ export default function Contact() {
         {/* PRIMARY CONTACT CARDS WITH EXACT REQUESTED BUTTONS (CALL, WHATSAPP, COPY NUMBER) */}
         <div className="space-y-6 mb-12">
           <div className="text-center space-y-1 mb-6">
-            <p className="text-xs uppercase tracking-widest text-[#A67C2E] font-bold">
+            <p className="text-xs uppercase tracking-widest text-wedding-darkgold font-bold">
               Official Invitation Helplines
             </p>
-            <p className="text-xs sm:text-sm text-[#274236]/80 font-serif">
+            <p className="text-xs sm:text-sm text-wedding-forest/80 font-serif">
               For route directions, venue queries, or ceremony schedules, please contact:
             </p>
           </div>
@@ -80,31 +80,30 @@ export default function Contact() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: idx * 0.1 }}
-                className="card-luxury bg-[#FFFDF7] p-6 sm:p-8 rounded-3xl border-2 border-[#C9A24A]/30 shadow-md flex flex-col justify-between"
+                className="card-luxury bg-wedding-ivory p-6 sm:p-8 rounded-3xl border-2 border-wedding-gold/30 shadow-md flex flex-col justify-between"
               >
                 <div>
-                  <div className="flex items-center justify-between gap-2 mb-3">
-                    <span className="w-10 h-10 rounded-xl bg-[#E8F1E4] border border-[#DCEAD5] flex items-center justify-center text-[#274236]">
-                      <Phone className="w-5 h-5 text-[#C9A24A]" />
+                  <div className="flex items-center gap-2 mb-3">
+                    <span className="w-10 h-10 rounded-xl bg-wedding-lightgreen border border-wedding-sage flex items-center justify-center text-wedding-forest">
+                      <Phone className="w-5 h-5 text-wedding-gold" />
                     </span>
-                    
                   </div>
 
-                  <h3 className="font-serif text-lg font-bold text-[#274236]">{c.name}</h3>
-                  <p className="text-xs font-tamil text-[#274236]/70 mb-3">{c.tamilName}</p>
+                  <h3 className="font-serif text-lg font-bold text-wedding-forest">{c.name}</h3>
+                  <p className="text-xs font-tamil text-wedding-forest/70 mb-3">{c.tamilName}</p>
 
-                  <p className="text-2xl sm:text-3xl font-serif font-bold text-[#274236] tracking-wide mb-5">
+                  <p className="text-2xl sm:text-3xl font-serif font-bold text-wedding-forest tracking-wide mb-5">
                     {c.formatted}
                   </p>
                 </div>
 
                 {/* EXACT SPECIFICATION BUTTONS: CALL, WHATSAPP, COPY NUMBER */}
-                <div className="grid grid-cols-3 gap-2 pt-4 border-t border-[#C9A24A]/25">
+                <div className="grid grid-cols-3 gap-2 pt-4 border-t border-wedding-gold/25">
                   <Button
                     href={`tel:${c.phone}`}
                     variant="forest"
                     size="sm"
-                    className="!px-2 !py-2.5 text-xs font-bold uppercase tracking-wider"
+                    className="px-2! py-2.5! text-xs font-bold uppercase tracking-wider"
                   >
                     CALL
                   </Button>
@@ -112,7 +111,7 @@ export default function Contact() {
                     href={`https://wa.me/91${c.phone}`}
                     variant="gold"
                     size="sm"
-                    className="!px-2 !py-2.5 text-xs font-bold uppercase tracking-wider"
+                    className="px-2! py-2.5! text-xs font-bold uppercase tracking-wider"
                   >
                     WHATSAPP
                   </Button>
@@ -120,7 +119,7 @@ export default function Contact() {
                     onClick={() => handleCopy(c.phone)}
                     variant="outline"
                     size="sm"
-                    className="!px-2 !py-2.5 text-xs font-bold uppercase tracking-wider"
+                    className="px-2! py-2.5! text-xs font-bold uppercase tracking-wider"
                   >
                     COPY NUMBER
                   </Button>
@@ -134,35 +133,35 @@ export default function Contact() {
 
         {/* Family Residences */}
         <div className="space-y-6 my-12">
-          <h3 className="text-2xl font-serif font-bold text-[#274236] text-center">
+          <h3 className="text-2xl font-serif font-bold text-wedding-forest text-center">
             Family Residences & Addresses
           </h3>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {/* Bride's Residence */}
-            <div className="card-luxury bg-[#FFFDF7] p-6 sm:p-8 rounded-2xl border border-[#C9A24A]/25 space-y-2">
-              <span className="text-xs uppercase tracking-widest text-[#A67C2E] font-bold">
+            <div className="card-luxury bg-wedding-ivory p-6 sm:p-8 rounded-2xl border border-wedding-gold/25 space-y-2">
+              <span className="text-xs uppercase tracking-widest text-wedding-darkgold font-bold">
                 Bride's Residence (Avadi)
               </span>
-              <h4 className="text-lg font-serif font-semibold text-[#274236]">
+              <h4 className="text-lg font-serif font-semibold text-wedding-forest">
                 {couple.bride.parents.father} & {couple.bride.parents.mother}
               </h4>
-              <p className="text-xs font-tamil text-[#A67C2E]">{couple.bride.address.tamilFull}</p>
-              <p className="text-xs sm:text-sm text-[#274236]/80 font-sans pt-1">
+              <p className="text-xs font-tamil text-wedding-darkgold">{couple.bride.address.tamilFull}</p>
+              <p className="text-xs sm:text-sm text-wedding-forest/80 font-sans pt-1">
                 {couple.bride.address.full}
               </p>
             </div>
 
             {/* Groom's Residence */}
-            <div className="card-luxury bg-[#FFFDF7] p-6 sm:p-8 rounded-2xl border border-[#C9A24A]/25 space-y-2">
-              <span className="text-xs uppercase tracking-widest text-[#A67C2E] font-bold">
+            <div className="card-luxury bg-wedding-ivory p-6 sm:p-8 rounded-2xl border border-wedding-gold/25 space-y-2">
+              <span className="text-xs uppercase tracking-widest text-wedding-darkgold font-bold">
                 Groom's Residence (Ambattur)
               </span>
-              <h4 className="text-lg font-serif font-semibold text-[#274236]">
+              <h4 className="text-lg font-serif font-semibold text-wedding-forest">
                 {couple.groom.parents.father} & {couple.groom.parents.mother}
               </h4>
-              <p className="text-xs font-tamil text-[#A67C2E]">{couple.groom.address.tamilFull}</p>
-              <p className="text-xs sm:text-sm text-[#274236]/80 font-sans pt-1">
+              <p className="text-xs font-tamil text-wedding-darkgold">{couple.groom.address.tamilFull}</p>
+              <p className="text-xs sm:text-sm text-wedding-forest/80 font-sans pt-1">
                 {couple.groom.address.full}
               </p>
             </div>
@@ -170,15 +169,15 @@ export default function Contact() {
         </div>
 
         {/* Elders Inviting */}
-        <div className="bg-[#F8F3E8] p-8 rounded-3xl border border-[#C9A24A]/30 text-center max-w-2xl mx-auto space-y-4">
-          <span className="text-xs uppercase tracking-widest text-[#A67C2E] font-bold">
+        <div className="bg-wedding-cream p-8 rounded-3xl border border-wedding-gold/30 text-center max-w-2xl mx-auto space-y-4">
+          <span className="text-xs uppercase tracking-widest text-wedding-darkgold font-bold">
             Elders & Hosts Inviting With Love (தங்கள் அன்புள்ள)
           </span>
-          <div className="space-y-2 text-sm sm:text-base font-serif text-[#274236]">
+          <div className="space-y-2 text-sm sm:text-base font-serif text-wedding-forest">
             {invitingWithLove.map((host, idx) => (
-              <div key={idx} className="border-b border-[#C9A24A]/15 pb-2 last:border-none last:pb-0">
+              <div key={idx} className="not-last:border-b not-last:border-wedding-gold/15 not-last:pb-2">
                 <p className="font-semibold">{host.english}</p>
-                <p className="text-xs font-tamil text-[#A67C2E]">{host.tamil}</p>
+                <p className="text-xs font-tamil text-wedding-darkgold">{host.tamil}</p>
               </div>
             ))}
           </div>
