@@ -22,17 +22,17 @@ export default function Contact() {
   const contacts = [
     {
       id: "coord-1",
-      name: "Family Helpline Coordinator 1",
-      tamilName: "குடும்ப வழிகாட்டுதல் ஒருங்கிணைப்பாளர்",
-      phone: "9884677345",
-      formatted: "+91 98846 77345",
-    },
-    {
-      id: "coord-2",
-      name: "Family Helpline Coordinator 2",
+      name: "Family Contact Person 1",
       tamilName: "குடும்ப வழிகாட்டுதல் ஒருங்கிணைப்பாளர்",
       phone: "9941796400",
       formatted: "+91 99417 96400",
+    },
+    {
+      id: "coord-2",
+      name: "Family Contact Person 2",
+      tamilName: "குடும்ப வழிகாட்டுதல் ஒருங்கிணைப்பாளர்",
+      phone: "9884677345",
+      formatted: "+91 98846 77345",
     },
   ];
 
@@ -87,9 +87,7 @@ export default function Contact() {
                     <span className="w-10 h-10 rounded-xl bg-[#E8F1E4] border border-[#DCEAD5] flex items-center justify-center text-[#274236]">
                       <Phone className="w-5 h-5 text-[#C9A24A]" />
                     </span>
-                    <span className="text-[11px] uppercase tracking-wider font-bold text-[#A67C2E]">
-                      Available 24/7
-                    </span>
+                    
                   </div>
 
                   <h3 className="font-serif text-lg font-bold text-[#274236]">{c.name}</h3>

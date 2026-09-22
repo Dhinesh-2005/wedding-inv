@@ -61,7 +61,7 @@ export default function App() {
       {/* Desktop Custom Luxury Halo Cursor */}
       <CustomCursor />
 
-      {/* Elegant Canvas Falling Elements Engine (Hearts, Petals, Leaves, Gold Dust) */}
+      {/* Elegant Canvas Falling Elements Engine (Falling Hearts & Gold Dust) */}
       <FallingParticles />
 
       {/* Top Brushed Gold Scroll Progress Indicator */}
