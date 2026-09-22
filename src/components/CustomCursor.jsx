@@ -82,7 +82,7 @@ export default function CustomCursor() {
           backgroundColor: isHovered ? "rgba(201, 162, 74, 0.12)" : "rgba(201, 162, 74, 0.03)",
         }}
         transition={{ duration: 0.2 }}
-        className="w-8 h-8 rounded-full border border-[#C9A24A] shadow-[0_0_12px_rgba(201,162,74,0.35)]"
+        className="w-8 h-8 rounded-full border border-wedding-gold shadow-[0_0_12px_rgba(201,162,74,0.35)]"
       />
 
       {/* Inner Pinpoint Core */}
@@ -96,7 +96,7 @@ export default function CustomCursor() {
         animate={{
           scale: isHovered ? 0.6 : 1,
         }}
-        className="w-1.5 h-1.5 rounded-full bg-[#C9A24A]"
+        className="w-1.5 h-1.5 rounded-full bg-wedding-gold"
       />
     </div>
   );

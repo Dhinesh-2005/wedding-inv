@@ -13,7 +13,7 @@ const NAV_LINKS = [
   { name: "Family", path: "/family" },
   { name: "Invitation", path: "/invitation" },
   { name: "Venues", path: "/venues" },
-  { name: "RSVP", path: "/rsvp" },
+  { name: "Contact", path: "/contact" },
 ];
 
 export default function Header() {
@@ -56,7 +56,7 @@ export default function Header() {
       <header
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ease-in-out ${
           isScrolled
-            ? "bg-[#FFFDF7]/90 backdrop-blur-md border-b border-[#C9A24A]/30 shadow-md shadow-[#274236]/5 py-3"
+            ? "bg-wedding-ivory/90 backdrop-blur-md border-b border-wedding-gold/30 shadow-md shadow-wedding-forest/5 py-3"
             : "bg-transparent py-5"
         }`}
       >
@@ -67,14 +67,14 @@ export default function Header() {
             className="group flex items-center gap-2.5 focus:outline-none"
             aria-label="Home"
           >
-            <div className="w-10 h-10 rounded-full border border-[#C9A24A] bg-[#FFFDF7] flex items-center justify-center text-[#A67C2E] shadow-sm transition-transform duration-300 group-hover:scale-105 group-hover:border-[#A67C2E]">
+            <div className="w-10 h-10 rounded-full border border-wedding-gold bg-wedding-ivory flex items-center justify-center text-wedding-darkgold shadow-sm transition-transform duration-300 group-hover:scale-105 group-hover:border-wedding-darkgold">
               <span className="font-serif text-sm font-semibold tracking-wider">P&P</span>
             </div>
             <div className="flex flex-col">
-              <span className="font-serif text-base sm:text-lg font-semibold tracking-tight text-[#274236] leading-none">
+              <span className="font-serif text-base sm:text-lg font-semibold tracking-tight text-wedding-forest leading-none">
                 Priyadharshini & Parthipan
               </span>
-              <span className="text-[10px] tracking-[0.2em] uppercase text-[#A67C2E] font-medium mt-1 font-sans">
+              <span className="text-[10px] tracking-[0.2em] uppercase text-wedding-darkgold font-medium mt-1 font-sans">
                 Oct 30, 2026
               </span>
             </div>
@@ -90,13 +90,13 @@ export default function Header() {
                   to={link.path}
                   className={`px-3 py-1.5 rounded-full text-xs xl:text-sm font-medium transition-all duration-200 relative ${
                     isActive
-                      ? "text-[#1A2F26] bg-[#E8F1E4] shadow-xs"
-                      : "text-[#274236]/80 hover:text-[#1A2F26] hover:bg-[#F8F3E8]/80"
+                      ? "text-wedding-forest-dark bg-wedding-lightgreen shadow-xs"
+                      : "text-wedding-forest/80 hover:text-wedding-forest-dark hover:bg-wedding-cream/80"
                   }`}
                 >
                   {link.name}
                   {isActive && (
-                    <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-4 h-[2px] bg-[#C9A24A] rounded-full" />
+                    <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-4 h-0.5 bg-wedding-gold rounded-full" />
                   )}
                 </Link>
               );
@@ -105,20 +105,20 @@ export default function Header() {
 
           {/* Desktop Right CTA */}
           <div className="hidden lg:flex items-center gap-3">
-            <Button to="/rsvp" variant="gold" size="sm" icon={Sparkles}>
-              RSVP
+            <Button to="/invitation" variant="gold" size="sm" icon={Sparkles}>
+              Invitation
             </Button>
           </div>
 
           {/* Mobile Hamburger Button */}
           <div className="flex items-center gap-2 lg:hidden">
-            <Button to="/rsvp" variant="gold" size="sm" className="!px-3 !py-1.5 text-xs">
-              RSVP
+            <Button to="/invitation" variant="gold" size="sm" className="px-3! py-1.5! text-xs">
+              E-Card
             </Button>
 
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="p-2 rounded-lg text-[#274236] hover:text-[#A67C2E] hover:bg-[#E8F1E4] focus:outline-none transition-colors"
+              className="p-2 rounded-lg text-wedding-forest hover:text-wedding-darkgold hover:bg-wedding-lightgreen focus:outline-none transition-colors"
               aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
             >
               {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -129,13 +129,13 @@ export default function Header() {
 
       {/* Mobile Full-Screen Elegant Menu */}
       <div
-        className={`fixed inset-0 z-40 bg-[#FFFDF7]/98 backdrop-blur-xl lg:hidden flex flex-col justify-between pt-24 pb-8 px-6 transition-all duration-500 ease-in-out ${
+        className={`fixed inset-0 z-40 bg-wedding-ivory/98 backdrop-blur-xl lg:hidden flex flex-col justify-between pt-24 pb-8 px-6 transition-all duration-500 ease-in-out ${
           mobileMenuOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
         }`}
       >
         {/* Background Decorative Gold Watermark */}
         <div className="absolute inset-0 flex items-center justify-center opacity-5 pointer-events-none select-none">
-          <span className="font-serif text-[140px] font-bold text-[#C9A24A]">P&P</span>
+          <span className="font-serif text-[140px] font-bold text-wedding-gold">P&P</span>
         </div>
 
         {/* Navigation Items */}
@@ -150,8 +150,8 @@ export default function Header() {
                 style={{ transitionDelay: `${idx * 25}ms` }}
                 className={`text-lg sm:text-xl font-serif py-1.5 px-4 rounded-full transition-all duration-300 ${
                   isActive
-                    ? "text-[#1A2F26] font-semibold bg-[#E8F1E4] border border-[#DCEAD5]"
-                    : "text-[#274236]/80 hover:text-[#C9A24A]"
+                    ? "text-wedding-forest-dark font-semibold bg-wedding-lightgreen border border-wedding-sage"
+                    : "text-wedding-forest/80 hover:text-wedding-gold"
                 }`}
               >
                 {link.name}
@@ -161,17 +161,17 @@ export default function Header() {
         </div>
 
         {/* Mobile Menu Footer */}
-        <div className="relative z-10 flex flex-col items-center gap-4 pt-4 border-t border-[#C9A24A]/20">
+        <div className="relative z-10 flex flex-col items-center gap-4 pt-4 border-t border-wedding-gold/20">
           <div className="text-center">
-            <p className="font-serif text-base font-semibold text-[#274236]">Priyadharshini & Parthipan</p>
-            <p className="text-xs text-[#A67C2E] font-sans">Friday, 30th October 2026 • Chennai</p>
+            <p className="font-serif text-base font-semibold text-wedding-forest">Priyadharshini & Parthipan</p>
+            <p className="text-xs text-wedding-darkgold font-sans">Friday, 30th October 2026 • Chennai</p>
           </div>
           <div className="flex gap-3 w-full max-w-xs">
-            <Button to="/invitation" variant="outline" size="sm" className="flex-1">
-              View E-Card
+            <Button to="/venues" variant="outline" size="sm" className="flex-1">
+              Venues
             </Button>
-            <Button to="/rsvp" variant="gold" size="sm" className="flex-1">
-              RSVP Now
+            <Button to="/invitation" variant="gold" size="sm" className="flex-1">
+              View E-Card
             </Button>
           </div>
         </div>

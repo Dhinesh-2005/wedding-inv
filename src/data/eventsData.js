@@ -42,7 +42,7 @@ export const eventsData = [
     description:
       "The sanctified moment of Mangalya Dharanam and the sacred rites performed under the divine grace of Lord Muruga, uniting Priyadharshini and Parthipan for life.",
     dressCode: "Traditional Temple Festive Attire / Silk Dhotis & Kanjeevaram Sarees",
-    mapLink: "https://www.google.com/maps/search/?api=1&query=Sri+Thandayuthapani+Swamy+Murugan+Temple+Veerapuram+Avadi",
+    mapLink: "https://maps.app.goo.gl/xjG84KpJYC1tJ7X78",
     calendarDetails: {
       title: "Priyadharshini & Parthipan — Subamuhurtham",
       description: "Sacred wedding ceremony at Sri Thandayuthapani Swamy Murugan Temple, Veerapuram, Avadi.",

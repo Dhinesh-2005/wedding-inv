@@ -79,9 +79,9 @@ export default function FloatingActions({ isMusicPlaying, onToggleMusic, onShowT
     setIsOpen(false);
   };
 
-  // Jump to RSVP
-  const handleRSVP = () => {
-    navigate("/rsvp");
+  // Jump to Invitation
+  const handleInvitation = () => {
+    navigate("/invitation");
     setIsOpen(false);
   };
 
@@ -94,21 +94,21 @@ export default function FloatingActions({ isMusicPlaying, onToggleMusic, onShowT
             initial={{ opacity: 0, scale: 0.8, y: 20 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.8, y: -20 }}
-            className="fixed inset-0 z-[300] flex items-center justify-center p-4 pointer-events-none select-none"
+            className="fixed inset-0 z-300 flex items-center justify-center p-4 pointer-events-none select-none"
           >
-            <div className="bg-[#FFFDF7] border-2 border-[#C9A24A] rounded-3xl p-8 sm:p-10 text-center shadow-2xl shadow-[#C9A24A]/40 max-w-sm pointer-events-auto">
+            <div className="bg-wedding-ivory border-2 border-wedding-gold rounded-3xl p-8 sm:p-10 text-center shadow-2xl shadow-wedding-gold/40 max-w-sm pointer-events-auto">
               <motion.div
                 animate={{ scale: [1, 1.3, 1] }}
                 transition={{ repeat: Infinity, duration: 1.2 }}
-                className="w-16 h-16 rounded-full bg-[#E8F1E4] border border-[#DCEAD5] flex items-center justify-center mx-auto mb-4 text-[#C9A24A]"
+                className="w-16 h-16 rounded-full bg-wedding-lightgreen border border-wedding-sage flex items-center justify-center mx-auto mb-4 text-wedding-gold"
               >
-                <Heart className="w-8 h-8 fill-[#C9A24A]" />
+                <Heart className="w-8 h-8 fill-wedding-gold" />
               </motion.div>
               {/* EXACT SPECIFICATION: "Made with Love ❤️" */}
-              <h3 className="font-serif text-2xl sm:text-3xl font-bold text-[#274236]">
+              <h3 className="font-serif text-2xl sm:text-3xl font-bold text-wedding-forest">
                 Made with Love ❤️
               </h3>
-              <p className="text-xs sm:text-sm font-serif text-[#274236]/80 mt-2 leading-relaxed">
+              <p className="text-xs sm:text-sm font-serif text-wedding-forest/80 mt-2 leading-relaxed">
                 Celebrating Priyadharshini & Parthipan's eternal union with warmth and heartfelt devotion.
               </p>
             </div>
@@ -131,17 +131,17 @@ export default function FloatingActions({ isMusicPlaying, onToggleMusic, onShowT
               {/* 1. Share */}
               <button
                 onClick={handleShare}
-                className="flex items-center gap-2.5 px-4 py-2 rounded-full bg-[#FFFDF7] text-[#274236] border border-[#C9A24A]/40 shadow-lg hover:bg-[#C9A24A] hover:text-[#1A2F26] transition-all text-xs font-serif font-bold cursor-pointer group"
+                className="flex items-center gap-2.5 px-4 py-2 rounded-full bg-wedding-ivory text-wedding-forest border border-wedding-gold/40 shadow-lg hover:bg-wedding-gold hover:text-wedding-forest-dark transition-all text-xs font-serif font-bold cursor-pointer group"
                 aria-label="Share invitation"
               >
                 <span className="opacity-80 group-hover:opacity-100">Share Link</span>
-                <Share2 className="w-4 h-4 text-[#C9A24A] group-hover:text-[#1A2F26]" />
+                <Share2 className="w-4 h-4 text-wedding-gold group-hover:text-wedding-forest-dark" />
               </button>
 
               {/* 2. WhatsApp */}
               <button
                 onClick={handleWhatsApp}
-                className="flex items-center gap-2.5 px-4 py-2 rounded-full bg-[#FFFDF7] text-[#274236] border border-[#C9A24A]/40 shadow-lg hover:bg-[#25D366] hover:text-white hover:border-transparent transition-all text-xs font-serif font-bold cursor-pointer group"
+                className="flex items-center gap-2.5 px-4 py-2 rounded-full bg-wedding-ivory text-wedding-forest border border-wedding-gold/40 shadow-lg hover:bg-[#25D366] hover:text-white hover:border-transparent transition-all text-xs font-serif font-bold cursor-pointer group"
                 aria-label="Share on WhatsApp"
               >
                 <span className="opacity-80 group-hover:opacity-100">WhatsApp</span>
@@ -154,33 +154,33 @@ export default function FloatingActions({ isMusicPlaying, onToggleMusic, onShowT
                   onToggleMusic();
                   setIsOpen(false);
                 }}
-                className="flex items-center gap-2.5 px-4 py-2 rounded-full bg-[#FFFDF7] text-[#274236] border border-[#C9A24A]/40 shadow-lg hover:bg-[#274236] hover:text-[#FFFDF7] hover:border-transparent transition-all text-xs font-serif font-bold cursor-pointer group"
+                className="flex items-center gap-2.5 px-4 py-2 rounded-full bg-wedding-ivory text-wedding-forest border border-wedding-gold/40 shadow-lg hover:bg-wedding-forest hover:text-wedding-ivory hover:border-transparent transition-all text-xs font-serif font-bold cursor-pointer group"
                 aria-label="Toggle music"
               >
                 <span className="opacity-80 group-hover:opacity-100">
                   {isMusicPlaying ? "Mute Music" : "Play Music"}
                 </span>
-                <Music className="w-4 h-4 text-[#C9A24A] group-hover:text-[#FFFDF7]" />
+                <Music className="w-4 h-4 text-wedding-gold group-hover:text-wedding-ivory" />
               </button>
 
-              {/* 4. RSVP */}
+              {/* 4. Invitation */}
               <button
-                onClick={handleRSVP}
-                className="flex items-center gap-2.5 px-4 py-2 rounded-full bg-[#FFFDF7] text-[#274236] border border-[#C9A24A]/40 shadow-lg hover:bg-[#C9A24A] hover:text-[#1A2F26] transition-all text-xs font-serif font-bold cursor-pointer group"
-                aria-label="RSVP"
+                onClick={handleInvitation}
+                className="flex items-center gap-2.5 px-4 py-2 rounded-full bg-wedding-ivory text-wedding-forest border border-wedding-gold/40 shadow-lg hover:bg-wedding-gold hover:text-wedding-forest-dark transition-all text-xs font-serif font-bold cursor-pointer group"
+                aria-label="Invitation"
               >
-                <span className="opacity-80 group-hover:opacity-100">RSVP</span>
-                <Sparkles className="w-4 h-4 text-[#C9A24A] group-hover:text-[#1A2F26]" />
+                <span className="opacity-80 group-hover:opacity-100">Invitation</span>
+                <Sparkles className="w-4 h-4 text-wedding-gold group-hover:text-wedding-forest-dark" />
               </button>
 
               {/* 5. Back to Top */}
               <button
                 onClick={handleBackToTop}
-                className="flex items-center gap-2.5 px-4 py-2 rounded-full bg-[#FFFDF7] text-[#274236] border border-[#C9A24A]/40 shadow-lg hover:bg-[#274236] hover:text-[#FFFDF7] transition-all text-xs font-serif font-bold cursor-pointer group"
+                className="flex items-center gap-2.5 px-4 py-2 rounded-full bg-wedding-ivory text-wedding-forest border border-wedding-gold/40 shadow-lg hover:bg-wedding-forest hover:text-wedding-ivory transition-all text-xs font-serif font-bold cursor-pointer group"
                 aria-label="Back to top"
               >
                 <span className="opacity-80 group-hover:opacity-100">Back to Top</span>
-                <ArrowUp className="w-4 h-4 text-[#C9A24A] group-hover:text-[#FFFDF7]" />
+                <ArrowUp className="w-4 h-4 text-wedding-gold group-hover:text-wedding-ivory" />
               </button>
             </motion.div>
           )}
@@ -189,10 +189,10 @@ export default function FloatingActions({ isMusicPlaying, onToggleMusic, onShowT
         {/* Floating Main Heart Button */}
         <button
           onClick={handleHeartClick}
-          className={`w-13 h-13 sm:w-14 sm:h-14 rounded-full flex items-center justify-center shadow-xl border-2 border-[#FFFDF7]/60 transition-all duration-300 cursor-pointer ${
+          className={`w-13 h-13 sm:w-14 sm:h-14 rounded-full flex items-center justify-center shadow-xl border-2 border-wedding-ivory/60 transition-all duration-300 cursor-pointer ${
             isOpen
-              ? "bg-[#274236] text-[#FFFDF7] rotate-90"
-              : "bg-gradient-to-tr from-[#C9A24A] via-[#DFBF6D] to-[#A67C2E] text-[#1A2F26] hover:scale-105 shadow-[#C9A24A]/40"
+              ? "bg-wedding-forest text-wedding-ivory rotate-90"
+              : "bg-linear-to-tr from-wedding-gold via-wedding-gold-light to-wedding-darkgold text-wedding-forest-dark hover:scale-105 shadow-wedding-gold/40"
           }`}
           title="Quick Actions (Click 5 times for a surprise!)"
           aria-label="Quick Actions Menu"

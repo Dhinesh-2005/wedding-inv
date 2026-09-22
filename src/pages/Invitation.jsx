@@ -234,24 +234,24 @@ export default function Invitation() {
         {/* BOOK CONTAINER */}
         <div
           ref={bookContainerRef}
-          className={`relative bg-[#FFFDF7] border-2 border-[#C9A24A] rounded-3xl p-4 sm:p-8 shadow-2xl overflow-hidden transition-all duration-300 ${
-            isFullscreen ? "fixed inset-0 z-[200] rounded-none !p-4 flex flex-col justify-between" : ""
+          className={`relative bg-wedding-ivory border-2 border-wedding-gold rounded-3xl p-4 sm:p-8 shadow-2xl overflow-hidden transition-all duration-300 ${
+            isFullscreen ? "fixed inset-0 z-200 rounded-none p-4! flex flex-col justify-between" : ""
           }`}
           onTouchStart={onTouchStart}
           onTouchMove={onTouchMove}
           onTouchEnd={onTouchEnd}
         >
           {/* Top Control Header */}
-          <div className="flex flex-wrap items-center justify-between gap-3 pb-4 border-b border-[#C9A24A]/25 z-20 relative">
+          <div className="flex flex-wrap items-center justify-between gap-3 pb-4 border-b border-wedding-gold/25 z-20 relative">
             <div className="flex items-center gap-2">
-              <span className="w-8 h-8 rounded-full bg-[#E8F1E4] border border-[#DCEAD5] flex items-center justify-center text-[#274236] font-bold text-xs">
-                <BookOpen className="w-4 h-4 text-[#C9A24A]" />
+              <span className="w-8 h-8 rounded-full bg-wedding-lightgreen border border-wedding-sage flex items-center justify-center text-wedding-forest font-bold text-xs">
+                <BookOpen className="w-4 h-4 text-wedding-gold" />
               </span>
               <div>
-                <p className="text-sm font-sans font-bold uppercase tracking-widest text-[#A67C2E]">
+                <p className="text-sm font-sans font-bold uppercase tracking-widest text-wedding-darkgold">
                   {viewMode === "pages" ? `PAGE ${currentPage + 1} OF ${currentList.length}` : `SPREAD ${currentPage + 1} OF ${currentList.length}`}
                 </p>
-                <p className="text-xs text-[#274236]/70 hidden sm:block">{page.title}</p>
+                <p className="text-xs text-wedding-forest/70 hidden sm:block">{page.title}</p>
               </div>
             </div>
 
@@ -259,7 +259,7 @@ export default function Invitation() {
             <div className="flex items-center gap-1.5 sm:gap-2">
               <button
                 onClick={() => setZoomLevel((z) => (z === 1 ? 1.5 : 1))}
-                className="p-2 rounded-xl bg-[#F8F3E8] text-[#274236] hover:bg-[#C9A24A] hover:text-[#1A2F26] transition-colors border border-[#C9A24A]/30 cursor-pointer"
+                className="p-2 rounded-xl bg-wedding-cream text-wedding-forest hover:bg-wedding-gold hover:text-wedding-forest-dark transition-colors border border-wedding-gold/30 cursor-pointer"
                 title="Toggle Zoom"
                 aria-label="Toggle zoom"
               >
@@ -269,7 +269,7 @@ export default function Invitation() {
               <a
                 href={page.src}
                 download={viewMode === "pages" ? `invitation_page_${currentPage + 1}.jpg` : `invitation_spread_${currentPage + 1}.jpg`}
-                className="p-2 rounded-xl bg-[#F8F3E8] text-[#274236] hover:bg-[#C9A24A] hover:text-[#1A2F26] transition-colors border border-[#C9A24A]/30 cursor-pointer"
+                className="p-2 rounded-xl bg-wedding-cream text-wedding-forest hover:bg-wedding-gold hover:text-wedding-forest-dark transition-colors border border-wedding-gold/30 cursor-pointer"
                 title="Download Page"
                 aria-label="Download page"
               >
@@ -278,7 +278,7 @@ export default function Invitation() {
 
               <button
                 onClick={handleShare}
-                className="p-2 rounded-xl bg-[#F8F3E8] text-[#274236] hover:bg-[#C9A24A] hover:text-[#1A2F26] transition-colors border border-[#C9A24A]/30 cursor-pointer"
+                className="p-2 rounded-xl bg-wedding-cream text-wedding-forest hover:bg-wedding-gold hover:text-wedding-forest-dark transition-colors border border-wedding-gold/30 cursor-pointer"
                 title="Share Invitation"
                 aria-label="Share"
               >
@@ -287,7 +287,7 @@ export default function Invitation() {
 
               <button
                 onClick={toggleFullscreen}
-                className="p-2 rounded-xl bg-[#F8F3E8] text-[#274236] hover:bg-[#C9A24A] hover:text-[#1A2F26] transition-colors border border-[#C9A24A]/30 cursor-pointer"
+                className="p-2 rounded-xl bg-wedding-cream text-wedding-forest hover:bg-wedding-gold hover:text-wedding-forest-dark transition-colors border border-wedding-gold/30 cursor-pointer"
                 title="Toggle Fullscreen"
                 aria-label="Toggle fullscreen"
               >
@@ -298,17 +298,17 @@ export default function Invitation() {
 
           {/* MAIN PAGE VIEWPORT WITH 3D PAGE-TURN ANIMATION */}
           <div
-            className="relative flex items-center justify-center my-6 min-h-[450px] sm:min-h-[580px] md:min-h-[660px] overflow-hidden perspective-[1200px]"
+            className="relative flex items-center justify-center my-6 min-h-112.5 sm:min-h-145 md:min-h-165 overflow-hidden perspective-distant"
             style={{ perspective: "1200px" }}
           >
             {/* Previous Page Arrow */}
             <button
               onClick={handlePrev}
               disabled={currentPage === 0}
-              className={`absolute left-2 sm:left-4 z-30 p-3 rounded-full bg-[#FFFDF7]/90 border border-[#C9A24A] text-[#274236] shadow-lg transition-all cursor-pointer ${
+              className={`absolute left-2 sm:left-4 z-30 p-3 rounded-full bg-wedding-ivory/90 border border-wedding-gold text-wedding-forest shadow-lg transition-all cursor-pointer ${
                 currentPage === 0
                   ? "opacity-30 cursor-not-allowed"
-                  : "hover:bg-[#C9A24A] hover:text-[#1A2F26] hover:scale-105"
+                  : "hover:bg-wedding-gold hover:text-wedding-forest-dark hover:scale-105"
               }`}
               aria-label="Previous page"
             >
@@ -329,7 +329,7 @@ export default function Invitation() {
                 <img
                   src={page.src}
                   alt={page.title}
-                  className="max-h-[70vh] w-auto object-contain rounded-xl border border-[#C9A24A]/40 shadow-2xl pointer-events-none"
+                  className="max-h-[70vh] w-auto object-contain rounded-xl border border-wedding-gold/40 shadow-2xl pointer-events-none"
                 />
               </motion.div>
             </AnimatePresence>
@@ -338,10 +338,10 @@ export default function Invitation() {
             <button
               onClick={handleNext}
               disabled={currentPage === currentList.length - 1}
-              className={`absolute right-2 sm:right-4 z-30 p-3 rounded-full bg-[#FFFDF7]/90 border border-[#C9A24A] text-[#274236] shadow-lg transition-all cursor-pointer ${
+              className={`absolute right-2 sm:right-4 z-30 p-3 rounded-full bg-wedding-ivory/90 border border-wedding-gold text-wedding-forest shadow-lg transition-all cursor-pointer ${
                 currentPage === currentList.length - 1
                   ? "opacity-30 cursor-not-allowed"
-                  : "hover:bg-[#C9A24A] hover:text-[#1A2F26] hover:scale-105"
+                  : "hover:bg-wedding-gold hover:text-wedding-forest-dark hover:scale-105"
               }`}
               aria-label="Next page"
             >
@@ -350,12 +350,12 @@ export default function Invitation() {
           </div>
 
           {/* Bottom Page Thumbnails & Details */}
-          <div className="pt-4 border-t border-[#C9A24A]/25 space-y-4">
+          <div className="pt-4 border-t border-wedding-gold/25 space-y-4">
             <div className="text-center">
-              <h4 className="font-serif text-base sm:text-lg font-bold text-[#274236]">
+              <h4 className="font-serif text-base sm:text-lg font-bold text-wedding-forest">
                 {page.title}
               </h4>
-              <p className="text-xs text-[#A67C2E] font-medium mt-0.5">{page.subtitle}</p>
+              <p className="text-xs text-wedding-darkgold font-medium mt-0.5">{page.subtitle}</p>
             </div>
 
             {/* Thumbnails Navigation Strip */}
@@ -370,16 +370,16 @@ export default function Invitation() {
                   }}
                   className={`flex flex-col items-center gap-1 p-1 rounded-xl transition-all cursor-pointer ${
                     currentPage === idx
-                      ? "ring-2 ring-[#C9A24A] bg-[#F8F3E8] scale-105"
+                      ? "ring-2 ring-wedding-gold bg-wedding-cream scale-105"
                       : "opacity-60 hover:opacity-100"
                   }`}
                 >
                   <img
                     src={p.src}
                     alt={p.title}
-                    className={`${viewMode === "pages" ? "w-12 h-16 sm:w-16 sm:h-20" : "w-20 h-14 sm:w-24 sm:h-16"} object-cover rounded-lg border border-[#C9A24A]/30 shadow-xs`}
+                    className={`${viewMode === "pages" ? "w-12 h-16 sm:w-16 sm:h-20" : "w-20 h-14 sm:w-24 sm:h-16"} object-cover rounded-lg border border-wedding-gold/30 shadow-xs`}
                   />
-                  <span className="text-[10px] font-sans font-bold uppercase tracking-wider text-[#274236]">
+                  <span className="text-[10px] font-sans font-bold uppercase tracking-wider text-wedding-forest">
                     {viewMode === "pages" ? `P. ${idx + 1}` : `Spread ${idx + 1}`}
                   </span>
                 </button>
@@ -398,8 +398,8 @@ export default function Invitation() {
           <Button to="/family" variant="outline" size="md">
             View Family Lineage
           </Button>
-          <Button to="/rsvp" variant="gold" size="md">
-            RSVP for Celebrations
+          <Button to="/venues" variant="gold" size="md">
+            View Venues & Directions
           </Button>
         </div>
       </div>

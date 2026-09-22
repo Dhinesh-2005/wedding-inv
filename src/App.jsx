@@ -24,7 +24,6 @@ import Gallery from "./pages/Gallery";
 import Family from "./pages/Family";
 import Invitation from "./pages/Invitation";
 import Venues from "./pages/Venues";
-import RSVP from "./pages/RSVP";
 import Contact from "./pages/Contact";
 
 export default function App() {
@@ -52,7 +51,7 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen flex flex-col bg-[#FFFDF7] text-[#274236] font-sans relative selection:bg-[#C9A24A]/25 selection:text-[#1A2F26]">
+    <div className="min-h-screen flex flex-col bg-wedding-ivory text-wedding-forest font-sans relative selection:bg-wedding-gold/25 selection:text-wedding-forest-dark">
       {/* Optional Cinematic Intro Overlay */}
       <CinematicIntro key={introKey} />
 
@@ -75,7 +74,7 @@ export default function App() {
       <Header />
 
       {/* Animated Route Transitions */}
-      <main className="flex-grow relative z-10">
+      <main className="grow relative z-10">
         <AnimatePresence mode="wait">
           <Routes location={location} key={location.pathname}>
             <Route path="/" element={<Home onReopenIntro={handleReopenIntro} />} />
@@ -87,7 +86,6 @@ export default function App() {
             <Route path="/family" element={<Family />} />
             <Route path="/invitation" element={<Invitation />} />
             <Route path="/venues" element={<Venues />} />
-            <Route path="/rsvp" element={<RSVP />} />
             <Route path="/contact" element={<Contact />} />
             {/* Fallback to Home */}
             <Route path="*" element={<Home onReopenIntro={handleReopenIntro} />} />

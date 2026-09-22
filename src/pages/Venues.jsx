@@ -14,6 +14,7 @@ import {
   Sparkles,
   CalendarPlus,
   Compass,
+  ExternalLink,
 } from "lucide-react";
 
 export default function Venues() {
@@ -25,16 +26,16 @@ export default function Venues() {
       tamilName: "ஸ்ரீ தண்டாயுதபாணி சுவாமி முருகன் திருக்கோயில்",
       date: "30 October 2026, Friday",
       time: "6:00 AM to 7:30 AM (Vrischika Lagnam)",
-      address: "Veerapuram, Avadi, Chennai",
-      directionsUrl:
-        "https://www.google.com/maps/search/?api=1&query=Sri+Thandayuthapani+Swamy+Murugan+Temple+Veerapuram+Avadi",
-      mapEmbedUrl: "https://maps.google.com/?q=Veerapuram+Avadi+Chennai",
+      address: "Veerapuram, Morai, Avadi, Chennai - 600055",
+      directionsUrl: "https://maps.app.goo.gl/xjG84KpJYC1tJ7X78",
+      mapEmbedUrl: "https://maps.app.goo.gl/xjG84KpJYC1tJ7X78",
+      embedIframeUrl: "https://maps.google.com/maps?q=13.1794793,80.0897212&z=15&output=embed",
       calendarLink: `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent(
         "Priyadharshini & Parthipan — Subamuhurtham (Wedding)"
       )}&dates=20261030T060000/20261030T090000&details=${encodeURIComponent(
         "Sacred wedding ceremony at Sri Thandayuthapani Swamy Murugan Temple, Veerapuram, Avadi."
       )}&location=${encodeURIComponent(
-        "Sri Thandayuthapani Swamy Murugan Temple, Veerapuram, Avadi, Chennai"
+        "Sri Thandayuthapani Swamy Murugan Temple, Veerapuram, Avadi, Chennai - 600055"
       )}`,
       highlights: [
         "Auspicious temple sanctum of Lord Muruga",
@@ -56,8 +57,9 @@ export default function Venues() {
       time: "6:30 PM onwards",
       address: "Gandhi Main Road, Oragadam, Ambattur, Chennai",
       directionsUrl:
-        "https://www.google.com/maps/search/?api=1&query=Rajeswari+Navaraj+Mahal+Gandhi+Main+Road+Oragadam+Ambattur+Chennai",
-      mapEmbedUrl: "https://maps.google.com/?q=Gandhi+Main+Road+Oragadam+Ambattur+Chennai",
+        "https://maps.app.goo.gl/EXwFr4DsQeS6SzUA8?g_st=aw",
+      mapEmbedUrl: "https://maps.app.goo.gl/EXwFr4DsQeS6SzUA8?g_st=aw",
+      embedIframeUrl: "https://maps.google.com/maps?q=Rajeswari+Navaraj+Mahal+Gandhi+Main+Road+Oragadam+Ambattur+Chennai&z=15&output=embed",
       calendarLink: `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent(
         "Priyadharshini & Parthipan — Wedding Reception"
       )}&dates=20261030T183000/20261030T223000&details=${encodeURIComponent(
@@ -91,31 +93,31 @@ export default function Venues() {
           {venues.map((v) => (
             <div
               key={v.id}
-              className="card-luxury bg-[#FFFDF7] rounded-3xl border-2 border-[#C9A24A]/35 shadow-lg overflow-hidden"
+              className="card-luxury bg-wedding-ivory rounded-3xl border-2 border-wedding-gold/35 shadow-lg overflow-hidden"
             >
               {/* Card Header */}
-              <div className="p-6 sm:p-8 bg-gradient-to-r from-[#F8F3E8] to-[#FFFDF7] border-b border-[#C9A24A]/25">
-                <span className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-[#E8F1E4] text-[#274236] border border-[#DCEAD5] mb-2.5">
-                  <Sparkles className="w-3.5 h-3.5 text-[#C9A24A]" />
+              <div className="p-6 sm:p-8 bg-linear-to-r from-wedding-cream to-wedding-ivory border-b border-wedding-gold/25">
+                <span className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-wedding-lightgreen text-wedding-forest border border-wedding-sage mb-2.5">
+                  <Sparkles className="w-3.5 h-3.5 text-wedding-gold" />
                   {v.venueType}
                 </span>
 
-                <h3 className="text-2xl sm:text-3xl md:text-4xl font-serif font-bold text-[#274236]">
+                <h3 className="text-2xl sm:text-3xl md:text-4xl font-serif font-bold text-wedding-forest">
                   {v.name}
                 </h3>
-                <p className="text-sm font-tamil text-[#A67C2E] font-semibold mt-0.5">
+                <p className="text-sm font-tamil text-wedding-darkgold font-semibold mt-0.5">
                   {v.tamilName}
                 </p>
 
                 {/* Date & Time pills */}
-                <div className="flex flex-wrap items-center gap-3 sm:gap-6 mt-4 text-xs sm:text-sm text-[#274236]/90 font-medium">
+                <div className="flex flex-wrap items-center gap-3 sm:gap-6 mt-4 text-xs sm:text-sm text-wedding-forest/90 font-medium">
                   <span className="flex items-center gap-1.5">
-                    <Clock className="w-4 h-4 text-[#C9A24A]" />
-                    <strong className="text-[#274236]">Date:</strong> {v.date}
+                    <Clock className="w-4 h-4 text-wedding-gold" />
+                    <strong className="text-wedding-forest">Date:</strong> {v.date}
                   </span>
                   <span className="flex items-center gap-1.5">
-                    <Clock className="w-4 h-4 text-[#C9A24A]" />
-                    <strong className="text-[#274236]">Time:</strong> {v.time}
+                    <Clock className="w-4 h-4 text-wedding-gold" />
+                    <strong className="text-wedding-forest">Time:</strong> {v.time}
                   </span>
                 </div>
               </div>
@@ -123,75 +125,97 @@ export default function Venues() {
               {/* Card Body */}
               <div className="p-6 sm:p-8 space-y-6">
                 {/* Address */}
-                <div className="flex items-start gap-3.5 p-4 rounded-2xl bg-[#FFFDF7] border border-[#C9A24A]/25 shadow-xs">
-                  <div className="w-10 h-10 rounded-xl bg-[#E8F1E4] flex items-center justify-center text-[#274236] shrink-0">
-                    <MapPin className="w-5 h-5 text-[#C9A24A]" />
+                <div className="flex items-start gap-3.5 p-4 rounded-2xl bg-wedding-ivory border border-wedding-gold/25 shadow-xs">
+                  <div className="w-10 h-10 rounded-xl bg-wedding-lightgreen flex items-center justify-center text-wedding-forest shrink-0">
+                    <MapPin className="w-5 h-5 text-wedding-gold" />
                   </div>
                   <div>
-                    <p className="text-xs uppercase tracking-wider text-[#A67C2E] font-bold">
+                    <p className="text-xs uppercase tracking-wider text-wedding-darkgold font-bold">
                       Venue Address
                     </p>
-                    <p className="text-base sm:text-lg font-serif font-semibold text-[#274236]">
+                    <p className="text-base sm:text-lg font-serif font-semibold text-wedding-forest">
                       {v.address}
                     </p>
                   </div>
                 </div>
 
-                {/* Action Buttons: Directions, Map, Calendar */}
-                <div className="flex flex-wrap gap-3 pt-2">
+                {/* Interactive Embedded Google Map */}
+                <div className="space-y-2">
+                  <div className="flex items-center justify-between text-xs">
+                    <span className="font-semibold text-wedding-forest flex items-center gap-1.5">
+                      <Compass className="w-4 h-4 text-wedding-gold" />
+                      Live Map View
+                    </span>
+                    <a
+                      href={v.directionsUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-wedding-darkgold hover:underline flex items-center gap-1 font-semibold text-xs transition-colors"
+                    >
+                      Open in Google Maps <ExternalLink className="w-3.5 h-3.5" />
+                    </a>
+                  </div>
+                  <div className="rounded-2xl overflow-hidden border border-wedding-gold/30 shadow-md relative aspect-video sm:aspect-[21/9] w-full bg-wedding-cream">
+                    <iframe
+                      title={`${v.name} Map Location`}
+                      src={v.embedIframeUrl}
+                      width="100%"
+                      height="100%"
+                      style={{ border: 0 }}
+                      allowFullScreen=""
+                      loading="lazy"
+                      referrerPolicy="no-referrer-when-downgrade"
+                      className="w-full h-full"
+                    />
+                  </div>
+                </div>
+
+                {/* Action Buttons: Directions & Calendar */}
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
                   <Button
                     href={v.directionsUrl}
                     variant="forest"
                     size="sm"
                     icon={Navigation}
-                    className="flex-1 min-w-[140px]"
+                    className="w-full justify-center text-xs sm:text-sm font-semibold py-2.5 shadow-sm"
                   >
-                    Directions
-                  </Button>
-                  <Button
-                    href={v.mapEmbedUrl}
-                    variant="outline"
-                    size="sm"
-                    icon={Compass}
-                    className="flex-1 min-w-[140px]"
-                  >
-                    Map
+                    Get Directions
                   </Button>
                   <Button
                     href={v.calendarLink}
                     variant="gold"
                     size="sm"
                     icon={CalendarPlus}
-                    className="flex-1 min-w-[140px]"
+                    className="w-full justify-center text-xs sm:text-sm font-semibold py-2.5 shadow-sm"
                   >
-                    Calendar
+                    Add to Calendar
                   </Button>
                 </div>
 
                 {/* Transportation Tips */}
-                <div className="pt-2 border-t border-[#C9A24A]/20">
-                  <h4 className="text-xs uppercase tracking-wider text-[#A67C2E] font-bold mb-3">
+                <div className="pt-2 border-t border-wedding-gold/20">
+                  <h4 className="text-xs uppercase tracking-wider text-wedding-darkgold font-bold mb-3">
                     Transit & Commute Directions
                   </h4>
-                  <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs text-[#274236]/80">
-                    <div className="p-3.5 rounded-xl bg-[#F8F3E8]/60 border border-[#C9A24A]/20 flex items-start gap-2.5">
-                      <Train className="w-4 h-4 text-[#C9A24A] shrink-0 mt-0.5" />
+                  <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs text-wedding-forest/80">
+                    <div className="p-3.5 rounded-xl bg-wedding-cream/60 border border-wedding-gold/20 flex items-start gap-2.5">
+                      <Train className="w-4 h-4 text-wedding-gold shrink-0 mt-0.5" />
                       <div>
-                        <p className="font-semibold text-[#274236]">By Train</p>
+                        <p className="font-semibold text-wedding-forest">By Train</p>
                         <p className="pt-0.5">{v.transportTips.train}</p>
                       </div>
                     </div>
-                    <div className="p-3.5 rounded-xl bg-[#F8F3E8]/60 border border-[#C9A24A]/20 flex items-start gap-2.5">
-                      <Bus className="w-4 h-4 text-[#C9A24A] shrink-0 mt-0.5" />
+                    <div className="p-3.5 rounded-xl bg-wedding-cream/60 border border-wedding-gold/20 flex items-start gap-2.5">
+                      <Bus className="w-4 h-4 text-wedding-gold shrink-0 mt-0.5" />
                       <div>
-                        <p className="font-semibold text-[#274236]">By Bus</p>
+                        <p className="font-semibold text-wedding-forest">By Bus</p>
                         <p className="pt-0.5">{v.transportTips.bus}</p>
                       </div>
                     </div>
-                    <div className="p-3.5 rounded-xl bg-[#F8F3E8]/60 border border-[#C9A24A]/20 flex items-start gap-2.5">
-                      <Car className="w-4 h-4 text-[#C9A24A] shrink-0 mt-0.5" />
+                    <div className="p-3.5 rounded-xl bg-wedding-cream/60 border border-wedding-gold/20 flex items-start gap-2.5">
+                      <Car className="w-4 h-4 text-wedding-gold shrink-0 mt-0.5" />
                       <div>
-                        <p className="font-semibold text-[#274236]">By Car / Taxi</p>
+                        <p className="font-semibold text-wedding-forest">By Car / Taxi</p>
                         <p className="pt-0.5">{v.transportTips.road}</p>
                       </div>
                     </div>
@@ -205,9 +229,9 @@ export default function Venues() {
         <SectionDivider variant="mandala" className="my-12" />
 
         {/* Assistance */}
-        <div className="bg-[#F8F3E8] p-8 rounded-3xl border border-[#C9A24A]/30 text-center space-y-3">
-          <h4 className="text-xl font-serif text-[#274236]">Need Travel Guidance?</h4>
-          <p className="text-xs sm:text-sm text-[#274236]/80 font-serif">
+        <div className="bg-wedding-cream p-8 rounded-3xl border border-wedding-gold/30 text-center space-y-3">
+          <h4 className="text-xl font-serif text-wedding-forest">Need Travel Guidance?</h4>
+          <p className="text-xs sm:text-sm text-wedding-forest/80 font-serif">
             Contact our family coordinators for assistance reaching the venues:
           </p>
           <div className="flex flex-wrap justify-center gap-4 pt-2">
