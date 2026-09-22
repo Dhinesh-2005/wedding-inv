@@ -1,0 +1,110 @@
+export const weddingData = {
+  couple: {
+    bride: {
+      name: "P. Priyadarshini",
+      tamilName: "P. பிரியதர்ஷினி",
+      qualification: "Diploma & Beautician",
+      title: "Selvi",
+      role: "Bride",
+      parents: {
+        father: "Mr. D. Prakash",
+        mother: "Mrs. P. Latha",
+        tamilFather: "திரு. D. பிரகாஷ்",
+        tamilMother: "திருமதி. P. லதா",
+      },
+      address: {
+        street: "No. 26, Sri Venkateswara Nagar, Old Kanniamman Nagar",
+        area: "Avadi",
+        city: "Chennai",
+        pincode: "600055",
+        full: "No. 26, Sri Venkateswara Nagar, Old Kanniamman Nagar, Avadi, Chennai - 600055",
+        tamilFull: "எண். 26, ஸ்ரீ வெங்கடேஸ்வரா நகர், பழைய கன்னியம்மன் நகர், ஆவடி, சென்னை - 600055",
+      },
+      grandparents: {
+        paternal: {
+          relation: "Paternal Grandparents (மகன்வழி)",
+          grandfather: "Late R. Desan",
+          grandmother: "Mrs. D. Suguna",
+          tamil: "தெய்வத்திரு. R. தேசன் - D. சுகுணா",
+        },
+        maternal: {
+          relation: "Maternal Grandparents (மகள்வழி)",
+          grandfather: "Late M. Mani",
+          grandmother: "Mrs. M. Kanagavalli",
+          tamil: "தெய்வத்திருவாளர்கள். M. மணி - M. கனகவள்ளி",
+        },
+      },
+    },
+    groom: {
+      name: "M. Parthipan",
+      tamilName: "M. பார்த்திபன்",
+      qualification: "B.E., (EEE)",
+      title: "Selvan",
+      role: "Groom",
+      relationOrder: "Younger Son (இளைய குமாரன்)",
+      parents: {
+        father: "Mr. P. Murugesan",
+        mother: "Mrs. M. Mageswari",
+        tamilFather: "திரு. P. முருகேசன்",
+        tamilMother: "திருமதி. M. மகேஸ்வரி",
+      },
+      address: {
+        street: "No. 3/2, Karpagam Street, Padmavathi Srinivasan Nagar",
+        area: "Ambattur",
+        city: "Chennai",
+        pincode: "600053",
+        full: "No. 3/2, Karpagam Street, Padmavathi Srinivasan Nagar, Ambattur, Chennai - 600053",
+        tamilFull: "எண். 3/2, கற்பகம் தெரு, பத்மாவதி சீனிவாசன் நகர், அம்பத்தூர், சென்னை - 600053",
+      },
+      grandparents: {
+        paternal: {
+          relation: "Paternal Grandparents (மகன்வழி)",
+          grandfather: "Mr. C. Pavadarayan",
+          grandmother: "Mrs. P. Unnamalai",
+          tamil: "திரு. C. பாவாடாராயன் - திருமதி. P. உண்ணாமலை",
+        },
+        maternal: {
+          relation: "Maternal Grandparents (மகள்வழி)",
+          grandfather: "Late G. Perumal",
+          grandmother: "Mrs. P. Mariyammal",
+          tamil: "தெய்வத்திருவாளர்கள் G. பெருமாள் - P. மாரியம்மாள்",
+        },
+      },
+    },
+  },
+  muhurthamAstrology: {
+    tamilYear: "Parabhava Varudam (பராபவ வருடம்)",
+    tamilMonth: "Aippasi Month 13th Day (ஐப்பசி மாதம் 13-ஆம் நாள்)",
+    dateText: "30-10-2026, Friday (வெள்ளிக்கிழமை)",
+    gregorianDate: "2026-10-30",
+    tithi: "Panchami Tithi (பஞ்சமி திதி)",
+    nakshatra: "Mrigashirsha (மிருகசீரிஷம் நட்சத்திரம்)",
+    yogam: "Siddha Yogam (சித்தயோகம்)",
+    lagnam: "Vrischika Lagnam (விருச்சிக லக்னம்)",
+    auspiciousTime: "6:00 AM to 7:30 AM (காலை 6.00 மணிக்குமேல் 7.30 மணிக்குள்)",
+  },
+  spiritualBlessings: {
+    invocations: [
+      "உ",
+      "முனீஸ்வரர் துணை (Blessings of Sri Muneeswarar)",
+      "மேல் மலையனூர் அங்காள பரமேஸ்வரி துணை (Blessings of Melmalayanur Sri Angala Parameswari)",
+    ],
+    kural: {
+      tamil: "அன்பும் அறனும் உடைத்தாயின் இல்வாழ்க்கை\nபண்பும் பயனும் அது.",
+      english: "If domestic life possesses love and virtue, that is both its graceful duty and its richest reward.",
+      author: "Thiruvalluvar (Thirukkural)",
+    },
+  },
+  contacts: [
+    { name: "Family Helpline 1", phone: "9884677345", raw: "9884677345" },
+    { name: "Family Helpline 2", phone: "9941796400", raw: "9941796400" },
+  ],
+  invitingWithLove: [
+    { tamil: "திரு. P. முருகேசன் - திருமதி. M. மகேஸ்வரி", english: "Mr. P. Murugesan & Mrs. M. Mageswari" },
+    { tamil: "தெய்வத்திரு. K. பாலா - B. காஞ்சனா", english: "Late K. Bala & Mrs. B. Kanchana" },
+    { tamil: "M. கிருஷ்ணமூர்த்தி - K. ராதா", english: "Mr. M. Krishnamoorthi & Mrs. K. Radha" },
+  ],
+  monogram: "P & P",
+  weddingDate: "October 30, 2026",
+  countdownTarget: "2026-10-30T06:00:00+05:30",
+};

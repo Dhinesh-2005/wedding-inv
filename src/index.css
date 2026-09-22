@@ -1,0 +1,141 @@
+@import "tailwindcss";
+
+@theme {
+  --color-wedding-lightgreen: #E8F1E4;
+  --color-wedding-sage: #DCEAD5;
+  --color-wedding-ivory: #FFFDF7;
+  --color-wedding-cream: #F8F3E8;
+  --color-wedding-gold: #C9A24A;
+  --color-wedding-gold-light: #DFBF6D;
+  --color-wedding-darkgold: #A67C2E;
+  --color-wedding-forest: #274236;
+  --color-wedding-forest-dark: #1A2F26;
+  --color-wedding-forest-light: #375D4C;
+
+  --font-serif: 'Cormorant Garamond', 'Playfair Display', Georgia, serif;
+  --font-display: 'Cinzel', 'Playfair Display', serif;
+  --font-script: 'Great Vibes', cursive;
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-tamil: 'Noto Serif Tamil', serif;
+}
+
+:root {
+  color-scheme: light;
+  --color-gold: #C9A24A;
+  --color-forest: #274236;
+  --color-ivory: #FFFDF7;
+  --color-cream: #F8F3E8;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: var(--font-sans);
+  background-color: #FFFDF7;
+  color: #274236;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #F8F3E8;
+}
+::-webkit-scrollbar-thumb {
+  background: #C9A24A;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #A67C2E;
+}
+
+/* Gold Gradient Text */
+.text-gold-gradient {
+  background: linear-gradient(135deg, #A67C2E 0%, #C9A24A 40%, #E8D39E 60%, #A67C2E 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Gold Foil Border */
+.border-gold-gradient {
+  border-image: linear-gradient(to right, #A67C2E, #C9A24A, #E8D39E, #A67C2E) 1;
+}
+
+/* Luxury Glassmorphic surfaces */
+.glass-panel {
+  background: rgba(255, 253, 247, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(201, 162, 74, 0.25);
+}
+
+.glass-panel-dark {
+  background: rgba(39, 66, 54, 0.92);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(201, 162, 74, 0.35);
+}
+
+/* Micro-interactions: Gold Glow & Lift */
+.btn-gold-glow {
+  transition: all 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.btn-gold-glow:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px -5px rgba(201, 162, 74, 0.45);
+}
+
+.card-luxury {
+  transition: all 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.card-luxury:hover {
+  transform: translateY(-3px);
+  border-color: rgba(201, 162, 74, 0.65);
+  box-shadow: 0 16px 32px -8px rgba(39, 66, 54, 0.08), 0 0 20px -3px rgba(201, 162, 74, 0.25);
+}
+
+/* Image / Frame Gentle Zoom */
+.frame-zoom {
+  overflow: hidden;
+}
+.frame-zoom img, .frame-zoom .zoom-target {
+  transition: transform 0.65s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.frame-zoom:hover img, .frame-zoom:hover .zoom-target {
+  transform: scale(1.05);
+}
+
+/* Shimmer animation for gold buttons */
+@keyframes sheen {
+  0% {
+    transform: translateX(-150%) skewX(-20deg);
+  }
+  100% {
+    transform: translateX(150%) skewX(-20deg);
+  }
+}
+
+.sheen-effect {
+  position: relative;
+  overflow: hidden;
+}
+
+.sheen-effect::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 60%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.3) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  transform: translateX(-150%) skewX(-20deg);
+}
+
+.sheen-effect:hover::after {
+  animation: sheen 1.2s ease-in-out;
+}
