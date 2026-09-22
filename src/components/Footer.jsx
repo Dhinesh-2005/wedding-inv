@@ -123,7 +123,7 @@ export default function Footer() {
             </h4>
             <div className="space-y-3 text-xs sm:text-sm text-[#274236]/80">
               <div>
-                <p className="font-semibold text-[#274236]">Sri Thandayuthapani Swamy Murugar Temple</p>
+                <p className="font-semibold text-[#274236]">Sri Thandayuthapani Swamy Murugan Temple</p>
                 <p className="text-xs text-[#274236]/70">Veerapuram, Avadi, Chennai</p>
                 <p className="text-[11px] text-[#A67C2E] font-medium">Muhurtham: 6:00 AM - 7:30 AM</p>
               </div>

@@ -21,20 +21,20 @@ export default function Venues() {
     {
       id: "wedding-venue",
       venueType: "Wedding Venue (சுபமுகூர்த்தம்)",
-      name: "Sri Thandayuthapani Swamy Murugar Temple",
-      tamilName: "ஸ்ரீ தண்டாயுதபாணி சுவாமி முருகர் திருக்கோயில்",
+      name: "Sri Thandayuthapani Swamy Murugan Temple",
+      tamilName: "ஸ்ரீ தண்டாயுதபாணி சுவாமி முருகன் திருக்கோயில்",
       date: "30 October 2026, Friday",
       time: "6:00 AM to 7:30 AM (Vrischika Lagnam)",
       address: "Veerapuram, Avadi, Chennai",
       directionsUrl:
-        "https://www.google.com/maps/search/?api=1&query=Sri+Thandayuthapani+Swamy+Murugar+Temple+Veerapuram+Avadi",
+        "https://www.google.com/maps/search/?api=1&query=Sri+Thandayuthapani+Swamy+Murugan+Temple+Veerapuram+Avadi",
       mapEmbedUrl: "https://maps.google.com/?q=Veerapuram+Avadi+Chennai",
       calendarLink: `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent(
-        "Priyadarshini & Parthipan — Subamuhurtham (Wedding)"
+        "Priyadharshini & Parthipan — Subamuhurtham (Wedding)"
       )}&dates=20261030T060000/20261030T090000&details=${encodeURIComponent(
-        "Sacred wedding ceremony at Sri Thandayuthapani Swamy Murugar Temple, Veerapuram, Avadi."
+        "Sacred wedding ceremony at Sri Thandayuthapani Swamy Murugan Temple, Veerapuram, Avadi."
       )}&location=${encodeURIComponent(
-        "Sri Thandayuthapani Swamy Murugar Temple, Veerapuram, Avadi, Chennai"
+        "Sri Thandayuthapani Swamy Murugan Temple, Veerapuram, Avadi, Chennai"
       )}`,
       highlights: [
         "Auspicious temple sanctum of Lord Muruga",
@@ -50,30 +50,30 @@ export default function Venues() {
     {
       id: "reception-venue",
       venueType: "Reception Venue (திருமண வரவேற்பு)",
-      name: "Rajeshwari Navaraj Mahal A/C",
+      name: "Rajeswari Navaraj Mahal A/c",
       tamilName: "ராஜேஸ்வரி நவராஜ் மஹால் A/c",
       date: "30 October 2026, Friday",
       time: "6:30 PM onwards",
       address: "Gandhi Main Road, Oragadam, Ambattur, Chennai",
       directionsUrl:
-        "https://www.google.com/maps/search/?api=1&query=Rajeswari+Navaraj+Mahal+Ambattur+Chennai",
+        "https://www.google.com/maps/search/?api=1&query=Rajeswari+Navaraj+Mahal+Gandhi+Main+Road+Oragadam+Ambattur+Chennai",
       mapEmbedUrl: "https://maps.google.com/?q=Gandhi+Main+Road+Oragadam+Ambattur+Chennai",
       calendarLink: `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent(
-        "Priyadarshini & Parthipan — Wedding Reception"
+        "Priyadharshini & Parthipan — Wedding Reception"
       )}&dates=20261030T183000/20261030T223000&details=${encodeURIComponent(
-        "Wedding reception at Rajeshwari Navaraj Mahal A/C, Gandhi Main Road, Oragadam, Ambattur, Chennai."
+        "Wedding reception at Rajeswari Navaraj Mahal A/c, Gandhi Main Road, Oragadam, Ambattur, Chennai."
       )}&location=${encodeURIComponent(
-        "Rajeshwari Navaraj Mahal A/C, Gandhi Main Road, Oragadam, Ambattur, Chennai"
+        "Rajeswari Navaraj Mahal A/c, Gandhi Main Road, Oragadam, Ambattur, Chennai"
       )}`,
       highlights: [
         "Fully Air-Conditioned Grand Celebration Hall",
         "Spacious traditional dining hall for royal banquet",
-        "Ample valet & guest parking area",
+        "Bus Routes 62, 120F directly stop at Oragadam, Ambattur",
       ],
       transportTips: {
         train: "Ambattur Railway Station (~3 km)",
-        bus: "Close to Oragadam (Ambattur) Bus Stop on Gandhi Main Road",
-        road: "Easily accessible from Ambattur OT & Chennai Bypass",
+        bus: "Bus Routes: 62, 120F • Alighting Stop: Oragadam, Ambattur (ஒரகடம், அம்பத்தூர்)",
+        road: "Easily accessible from Ambattur OT, Gandhi Main Road & Chennai Bypass",
       },
     },
   ];

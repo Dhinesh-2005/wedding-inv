@@ -22,7 +22,7 @@ export default function FloatingActions({ isMusicPlaying, onToggleMusic, onShowT
   const navigate = useNavigate();
 
   const INVITATION_MESSAGE =
-    "You're warmly invited to the wedding of P. Priyadarshini & M. Parthipan on 30 October 2026. We would be delighted to celebrate this special day with you.";
+    "You're warmly invited to the wedding of P. Priyadharshini & M. Parthipan on 30 October 2026. We would be delighted to celebrate this special day with you.";
 
   // Easter Egg: 5 clicks on the heart
   const handleHeartClick = () => {
@@ -57,7 +57,7 @@ export default function FloatingActions({ isMusicPlaying, onToggleMusic, onShowT
     if (navigator.share) {
       try {
         await navigator.share({
-          title: "P. Priyadarshini & M. Parthipan | Wedding Invitation",
+          title: "P. Priyadharshini & M. Parthipan | Wedding Invitation",
           text: INVITATION_MESSAGE,
           url: window.location.origin,
         });
@@ -109,7 +109,7 @@ export default function FloatingActions({ isMusicPlaying, onToggleMusic, onShowT
                 Made with Love ❤️
               </h3>
               <p className="text-xs sm:text-sm font-serif text-[#274236]/80 mt-2 leading-relaxed">
-                Celebrating Priyadarshini & Parthipan's eternal union with warmth and heartfelt devotion.
+                Celebrating Priyadharshini & Parthipan's eternal union with warmth and heartfelt devotion.
               </p>
             </div>
           </motion.div>

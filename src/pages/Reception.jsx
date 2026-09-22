@@ -15,7 +15,7 @@ export default function Reception() {
       icon: Sparkles,
       title: "Royal Couple Felicitation",
       tamil: "மணமக்கள் வரவேற்பு & வாழ்த்து",
-      desc: "Join us in greeting the newlyweds Priyadarshini & Parthipan as they begin their journey together with warm smiles, hugs, and blessings.",
+      desc: "Join us in greeting the newlyweds Priyadharshini & Parthipan as they begin their journey together with warm smiles, hugs, and blessings.",
     },
     {
       icon: Utensils,
@@ -39,11 +39,11 @@ export default function Reception() {
 
   const handleCalendar = () => {
     const googleCalendarUrl = `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent(
-      "Priyadarshini & Parthipan — Wedding Reception"
+      "Priyadharshini & Parthipan — Wedding Reception"
     )}&dates=20261030T183000/20261030T223000&details=${encodeURIComponent(
-      "Wedding Reception at Rajeshwari Navaraj Mahal A/C, Gandhi Main Road, Oragadam, Ambattur, Chennai."
+      "Wedding Reception at Rajeswari Navaraj Mahal A/c, Gandhi Main Road, Oragadam, Ambattur, Chennai."
     )}&location=${encodeURIComponent(
-      "Rajeshwari Navaraj Mahal A/C, Gandhi Main Road, Oragadam, Ambattur, Chennai"
+      "Rajeswari Navaraj Mahal A/c, Gandhi Main Road, Oragadam, Ambattur, Chennai"
     )}`;
     window.open(googleCalendarUrl, "_blank", "noopener,noreferrer");
   };
@@ -85,17 +85,17 @@ export default function Reception() {
               Reception Venue
             </span>
             <h2 className="text-3xl sm:text-4xl font-serif font-bold text-[#274236]">
-              Rajeshwari Navaraj Mahal A/C
+              Rajeswari Navaraj Mahal A/c
             </h2>
             <p className="text-sm font-tamil text-[#A67C2E] font-medium">
               ராஜேஸ்வரி நவராஜ் மஹால் A/c
             </p>
 
             <div className="pt-3 text-sm sm:text-base text-[#274236]/90 font-serif leading-relaxed">
-              <p className="font-semibold">Gandhi Main Road,</p>
-              <p>Oragadam,</p>
-              <p>Ambattur,</p>
-              <p>Chennai.</p>
+              <p className="font-semibold">Gandhi Main Road, Oragadam, Ambattur, Chennai.</p>
+              <p className="text-xs sm:text-sm text-[#A67C2E] font-sans font-semibold mt-1">
+                பேருந்து வழித்தடம் எண் : 62, 120F | இறங்குமிடம் : ஒரகடம், அம்பத்தூர்
+              </p>
             </div>
           </div>
 

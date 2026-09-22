@@ -117,7 +117,7 @@ export default function Home({ onReopenIntro }) {
             className="space-y-3 py-2"
           >
             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-serif text-[#274236] tracking-tight uppercase leading-none font-medium">
-              P. PRIYADARSHINI
+              P. PRIYADHARSHINI
             </h1>
 
             {/* Heart Divider */}
@@ -283,13 +283,13 @@ export default function Home({ onReopenIntro }) {
                 Selvi
               </span>
               <h3 className="text-3xl sm:text-4xl font-serif font-bold text-[#274236]">
-                P. Priyadarshini
+                P. Priyadharshini
               </h3>
               <p className="text-sm font-sans font-semibold text-[#A67C2E]">
-                Diploma & Beautician
+                Diploma (Beautician)
               </p>
               <p className="text-xs font-tamil text-[#274236]/80">
-                {couple.bride.tamilName}, (Diploma & Beautician)
+                {couple.bride.tamilName}, Diploma (Beautician)
               </p>
 
               {/* Parents details */}

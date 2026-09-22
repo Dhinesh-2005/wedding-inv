@@ -72,7 +72,7 @@ export default function Header() {
             </div>
             <div className="flex flex-col">
               <span className="font-serif text-base sm:text-lg font-semibold tracking-tight text-[#274236] leading-none">
-                Priyadarshini & Parthipan
+                Priyadharshini & Parthipan
               </span>
               <span className="text-[10px] tracking-[0.2em] uppercase text-[#A67C2E] font-medium mt-1 font-sans">
                 Oct 30, 2026
@@ -163,7 +163,7 @@ export default function Header() {
         {/* Mobile Menu Footer */}
         <div className="relative z-10 flex flex-col items-center gap-4 pt-4 border-t border-[#C9A24A]/20">
           <div className="text-center">
-            <p className="font-serif text-base font-semibold text-[#274236]">Priyadarshini & Parthipan</p>
+            <p className="font-serif text-base font-semibold text-[#274236]">Priyadharshini & Parthipan</p>
             <p className="text-xs text-[#A67C2E] font-sans">Friday, 30th October 2026 • Chennai</p>
           </div>
           <div className="flex gap-3 w-full max-w-xs">

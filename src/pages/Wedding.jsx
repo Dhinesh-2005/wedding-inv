@@ -23,7 +23,7 @@ export default function Wedding() {
       order: "02",
       name: "Kanyadaanam",
       tamil: "கன்னிகாதானம்",
-      desc: "The heartfelt blessing where parents Mr. D. Prakash & Mrs. P. Latha place Priyadarshini's hand into Parthipan's, entrusting her to his lifelong care and devotion.",
+      desc: "The heartfelt blessing where parents Mr. D. Prakash & Mrs. P. Latha place Priyadharshini's hand into Parthipan's, entrusting her to his lifelong care and devotion.",
     },
     {
       order: "03",
@@ -47,11 +47,11 @@ export default function Wedding() {
 
   const handleCalendar = () => {
     const googleCalendarUrl = `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent(
-      "Priyadarshini & Parthipan — Subamuhurtham (Wedding)"
+      "Priyadharshini & Parthipan — Subamuhurtham (Wedding)"
     )}&dates=20261030T060000/20261030T090000&details=${encodeURIComponent(
-      "Sacred marriage ceremony at Sri Thandayuthapani Swamy Murugar Temple, Veerapuram, Avadi."
+      "Sacred marriage ceremony at Sri Thandayuthapani Swamy Murugan Temple, Veerapuram, Avadi."
     )}&location=${encodeURIComponent(
-      "Sri Thandayuthapani Swamy Murugar Temple, Veerapuram, Avadi, Chennai"
+      "Sri Thandayuthapani Swamy Murugan Temple, Veerapuram, Avadi, Chennai"
     )}`;
     window.open(googleCalendarUrl, "_blank", "noopener,noreferrer");
   };
@@ -86,7 +86,7 @@ export default function Wedding() {
                 Sacred Temple Sanctum
               </span>
               <h3 className="text-2xl sm:text-3xl font-serif text-[#274236]">
-                Sri Thandayuthapani Swamy Murugar Temple
+                Sri Thandayuthapani Swamy Murugan Temple
               </h3>
               <p className="text-sm font-tamil text-[#A67C2E]">
                 வீராபுரம், ஆவடி, சென்னை (Veerapuram, Avadi, Chennai)
@@ -100,7 +100,7 @@ export default function Wedding() {
           {/* Action Row: Directions, Map, Calendar */}
           <div className="pt-4 border-t border-[#C9A24A]/20 flex flex-wrap gap-3">
             <Button
-              href="https://www.google.com/maps/search/?api=1&query=Sri+Thandayuthapani+Swamy+Murugar+Temple+Veerapuram+Avadi"
+              href="https://www.google.com/maps/search/?api=1&query=Sri+Thandayuthapani+Swamy+Murugan+Temple+Veerapuram+Avadi"
               variant="forest"
               size="sm"
               icon={Navigation}

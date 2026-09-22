@@ -14,37 +14,60 @@ import {
   Download,
   Share2,
   BookOpen,
-  Sparkles,
+  Layers,
+  FileText,
 } from "lucide-react";
 
-const invitationPages = [
+const singlePages = [
   {
     id: 1,
     title: "Front Cover • திருமண அழைப்பிதழ்",
-    subtitle: "P. Priyadarshini & M. Parthipan • 30-10-2026",
+    subtitle: "P. Priyadharshini & M. Parthipan • 30-10-2026",
     src: "/images/invitation/page1_cover.jpg",
+    badge: "Cover Page",
   },
   {
     id: 2,
     title: "Formal English Invitation",
     subtitle: "Mr. D. Prakash & Mrs. P. Latha Request Your Esteemed Presence",
     src: "/images/invitation/page2_english.jpg",
+    badge: "English Patrika",
   },
   {
     id: 3,
     title: "Traditional Tamil Patrika • தமிழ் அழைப்பிதழ்",
     subtitle: "உ • முனீஸ்வரர் துணை • பராபவ வருடம் ஐப்பசி 13",
     src: "/images/invitation/page3_tamil.jpg",
+    badge: "Tamil Patrika",
   },
   {
     id: 4,
     title: "Family Lineage & Auspicious Schedule",
     subtitle: "பெண்ணுக்குரியோர்கள் • பிள்ளைக்குரியோர்கள் • நிகழ்ச்சி நிரல்",
     src: "/images/invitation/page4_family_schedule.jpg",
+    badge: "Lineage & Schedule",
+  },
+];
+
+const spreadPages = [
+  {
+    id: 1,
+    title: "Spread 1 • Original Front Cover & Family Schedule",
+    subtitle: "பெண்ணுக்குரியோர்கள் • பிள்ளைக்குரியோர்கள் • நிகழ்ச்சி நிரல் & முகப்பு",
+    src: "/images/invitation/spread1_cover_family.jpg",
+    badge: "Spread 1 (Outer)",
+  },
+  {
+    id: 2,
+    title: "Spread 2 • Original English Invitation & Tamil Patrika",
+    subtitle: "Wedding Invitation & மங்களகரமான தமிழ் திருமண அழைப்பிதழ்",
+    src: "/images/invitation/spread2_english_tamil.jpg",
+    badge: "Spread 2 (Inner)",
   },
 ];
 
 export default function Invitation() {
+  const [viewMode, setViewMode] = useState("pages"); // "pages" or "spreads"
   const [currentPage, setCurrentPage] = useState(0);
   const [zoomLevel, setZoomLevel] = useState(1);
   const [isFullscreen, setIsFullscreen] = useState(false);
@@ -54,7 +77,8 @@ export default function Invitation() {
 
   const bookContainerRef = useRef(null);
 
-  const page = invitationPages[currentPage];
+  const currentList = viewMode === "pages" ? singlePages : spreadPages;
+  const page = currentList[currentPage] || currentList[0];
 
   const handlePrev = () => {
     if (currentPage > 0) {
@@ -65,11 +89,18 @@ export default function Invitation() {
   };
 
   const handleNext = () => {
-    if (currentPage < invitationPages.length - 1) {
+    if (currentPage < currentList.length - 1) {
       setDirection(1);
       setZoomLevel(1);
       setCurrentPage((prev) => prev + 1);
     }
+  };
+
+  const switchViewMode = (mode) => {
+    setViewMode(mode);
+    setCurrentPage(0);
+    setZoomLevel(1);
+    setDirection(1);
   };
 
   // Keyboard navigation
@@ -83,7 +114,7 @@ export default function Invitation() {
     };
     window.addEventListener("keydown", handleKeyDown);
     return () => window.removeEventListener("keydown", handleKeyDown);
-  }, [currentPage]);
+  }, [currentPage, currentList]);
 
   // Touch Swipe
   const minSwipeDistance = 50;
@@ -122,8 +153,8 @@ export default function Invitation() {
     if (navigator.share) {
       try {
         await navigator.share({
-          title: "Wedding Invitation: Priyadarshini & Parthipan",
-          text: `Wedding invitation card of P. Priyadarshini & M. Parthipan - Friday, 30th October 2026.`,
+          title: "Wedding Invitation: Priyadharshini & Parthipan",
+          text: `Wedding invitation card of P. Priyadharshini & M. Parthipan - Friday, 30th October 2026.`,
           url: window.location.href,
         });
       } catch (err) {
@@ -172,6 +203,34 @@ export default function Invitation() {
           tamilSubtitle="அசல் திருமண அழைப்பிதழ் புத்தகம்"
         />
 
+        {/* View Mode Toggle: Single Pages vs Full Dual-Page Spreads */}
+        <div className="flex justify-center mb-6">
+          <div className="inline-flex p-1.5 rounded-2xl bg-[#F8F3E8] border border-[#C9A24A]/40 shadow-xs">
+            <button
+              onClick={() => switchViewMode("pages")}
+              className={`flex items-center gap-2 px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all cursor-pointer ${
+                viewMode === "pages"
+                  ? "bg-[#274236] text-[#F8F3E8] shadow-md"
+                  : "text-[#274236]/80 hover:text-[#274236]"
+              }`}
+            >
+              <FileText className="w-4 h-4 text-[#C9A24A]" />
+              Single Pages (4 Pages)
+            </button>
+            <button
+              onClick={() => switchViewMode("spreads")}
+              className={`flex items-center gap-2 px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all cursor-pointer ${
+                viewMode === "spreads"
+                  ? "bg-[#274236] text-[#F8F3E8] shadow-md"
+                  : "text-[#274236]/80 hover:text-[#274236]"
+              }`}
+            >
+              <Layers className="w-4 h-4 text-[#C9A24A]" />
+              Original Full Spreads (2 Spreads)
+            </button>
+          </div>
+        </div>
+
         {/* BOOK CONTAINER */}
         <div
           ref={bookContainerRef}
@@ -189,9 +248,8 @@ export default function Invitation() {
                 <BookOpen className="w-4 h-4 text-[#C9A24A]" />
               </span>
               <div>
-                {/* EXACT SPECIFICATION: PAGE X OF 4 */}
                 <p className="text-sm font-sans font-bold uppercase tracking-widest text-[#A67C2E]">
-                  PAGE {currentPage + 1} OF {invitationPages.length}
+                  {viewMode === "pages" ? `PAGE ${currentPage + 1} OF ${currentList.length}` : `SPREAD ${currentPage + 1} OF ${currentList.length}`}
                 </p>
                 <p className="text-xs text-[#274236]/70 hidden sm:block">{page.title}</p>
               </div>
@@ -210,7 +268,7 @@ export default function Invitation() {
 
               <a
                 href={page.src}
-                download={`invitation_page_${currentPage + 1}.jpg`}
+                download={viewMode === "pages" ? `invitation_page_${currentPage + 1}.jpg` : `invitation_spread_${currentPage + 1}.jpg`}
                 className="p-2 rounded-xl bg-[#F8F3E8] text-[#274236] hover:bg-[#C9A24A] hover:text-[#1A2F26] transition-colors border border-[#C9A24A]/30 cursor-pointer"
                 title="Download Page"
                 aria-label="Download page"
@@ -260,7 +318,7 @@ export default function Invitation() {
             {/* Animated Page */}
             <AnimatePresence initial={false} custom={direction} mode="wait">
               <motion.div
-                key={currentPage}
+                key={`${viewMode}-${currentPage}`}
                 custom={direction}
                 variants={pageVariants}
                 initial="enter"
@@ -279,9 +337,9 @@ export default function Invitation() {
             {/* Next Page Arrow */}
             <button
               onClick={handleNext}
-              disabled={currentPage === invitationPages.length - 1}
+              disabled={currentPage === currentList.length - 1}
               className={`absolute right-2 sm:right-4 z-30 p-3 rounded-full bg-[#FFFDF7]/90 border border-[#C9A24A] text-[#274236] shadow-lg transition-all cursor-pointer ${
-                currentPage === invitationPages.length - 1
+                currentPage === currentList.length - 1
                   ? "opacity-30 cursor-not-allowed"
                   : "hover:bg-[#C9A24A] hover:text-[#1A2F26] hover:scale-105"
               }`}
@@ -302,7 +360,7 @@ export default function Invitation() {
 
             {/* Thumbnails Navigation Strip */}
             <div className="flex items-center justify-center gap-2 sm:gap-3 overflow-x-auto py-1">
-              {invitationPages.map((p, idx) => (
+              {currentList.map((p, idx) => (
                 <button
                   key={p.id}
                   onClick={() => {
@@ -319,10 +377,10 @@ export default function Invitation() {
                   <img
                     src={p.src}
                     alt={p.title}
-                    className="w-12 h-16 sm:w-16 sm:h-20 object-cover rounded-lg border border-[#C9A24A]/30 shadow-xs"
+                    className={`${viewMode === "pages" ? "w-12 h-16 sm:w-16 sm:h-20" : "w-20 h-14 sm:w-24 sm:h-16"} object-cover rounded-lg border border-[#C9A24A]/30 shadow-xs`}
                   />
                   <span className="text-[10px] font-sans font-bold uppercase tracking-wider text-[#274236]">
-                    P. {idx + 1}
+                    {viewMode === "pages" ? `P. ${idx + 1}` : `Spread ${idx + 1}`}
                   </span>
                 </button>
               ))}
@@ -336,6 +394,9 @@ export default function Invitation() {
         <div className="text-center flex flex-wrap justify-center gap-4">
           <Button to="/wedding" variant="forest" size="md">
             View Wedding Ceremony
+          </Button>
+          <Button to="/family" variant="outline" size="md">
+            View Family Lineage
           </Button>
           <Button to="/rsvp" variant="gold" size="md">
             RSVP for Celebrations

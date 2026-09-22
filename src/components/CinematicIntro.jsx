@@ -66,7 +66,7 @@ export default function CinematicIntro({ onComplete }) {
             {/* Names & Heart */}
             <div className="space-y-3 py-2">
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif text-[#274236] tracking-tight">
-                P. PRIYADARSHINI
+                P. PRIYADHARSHINI
               </h2>
 
               <div className="flex items-center justify-center gap-3 py-1 text-[#C9A24A]">

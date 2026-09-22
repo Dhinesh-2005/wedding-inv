@@ -53,7 +53,7 @@ export const galleryItems = [
     title: "Sacred Temple Sanctum",
     category: "wedding",
     categoryLabel: "Wedding",
-    description: "Sri Thandayuthapani Swamy Murugar Temple in Veerapuram, Avadi.",
+    description: "Sri Thandayuthapani Swamy Murugan Temple in Veerapuram, Avadi.",
     src: "/images/invitation/page3_tamil.jpg",
   },
   {

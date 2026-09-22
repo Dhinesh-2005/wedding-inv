@@ -1,9 +1,9 @@
 export const weddingData = {
   couple: {
     bride: {
-      name: "P. Priyadarshini",
+      name: "P. Priyadharshini",
       tamilName: "P. பிரியதர்ஷினி",
-      qualification: "Diploma & Beautician",
+      qualification: "Diploma (Beautician)",
       title: "Selvi",
       role: "Bride",
       parents: {
@@ -13,30 +13,32 @@ export const weddingData = {
         tamilMother: "திருமதி. P. லதா",
       },
       address: {
-        street: "No. 26, Sri Venkateswara Nagar, Old Kanniamman Nagar",
+        street: "No. 28, Sri Venkateswara Nagar, Old Kanniamman Nagar",
         area: "Avadi",
         city: "Chennai",
         pincode: "600055",
-        full: "No. 26, Sri Venkateswara Nagar, Old Kanniamman Nagar, Avadi, Chennai - 600055",
-        tamilFull: "எண். 26, ஸ்ரீ வெங்கடேஸ்வரா நகர், பழைய கன்னியம்மன் நகர், ஆவடி, சென்னை - 600055",
+        full: "No. 28, Sri Venkateswara Nagar, Old Kanniamman Nagar, Avadi, Chennai - 600055",
+        tamilFull: "எண். 28, ஸ்ரீ வெங்கடேஸ்வரா நகர், பழைய கன்னியம்மன் நகர், ஆவடி, சென்னை - 600055",
       },
       grandparents: {
         paternal: {
           relation: "Paternal Grandparents (மகன்வழி)",
           grandfather: "Late R. Desan",
           grandmother: "Mrs. D. Suguna",
-          tamil: "தெய்வத்திரு. R. தேசன் - D. சுகுணா",
+          place: "Kanchipuram",
+          tamil: "தெய்வத்திரு. R. தேசன் - D. சகுணா, காஞ்சிபுரம்",
         },
         maternal: {
           relation: "Maternal Grandparents (மகள்வழி)",
           grandfather: "Late M. Mani",
           grandmother: "Mrs. M. Kanagavalli",
-          tamil: "தெய்வத்திருவாளர்கள். M. மணி - M. கனகவள்ளி",
+          place: "Kanchipuram",
+          tamil: "தெய்வத்திருவாளர்கள் M. மணி - M. கனகவள்ளி, காஞ்சிபுரம்",
         },
       },
     },
     groom: {
-      name: "M. Parthipan",
+      name: "M. Parthiban",
       tamilName: "M. பார்த்திபன்",
       qualification: "B.E., (EEE)",
       title: "Selvan",
@@ -60,8 +62,8 @@ export const weddingData = {
         paternal: {
           relation: "Paternal Grandparents (மகன்வழி)",
           grandfather: "Mr. C. Pavadarayan",
-          grandmother: "Mrs. P. Unnamalai",
-          tamil: "திரு. C. பாவாடாராயன் - திருமதி. P. உண்ணாமலை",
+          grandmother: "Mrs. P. Unnamalai (Unnalai)",
+          tamil: "திரு. C. பாலவாடராயன் - திருமதி. P. உண்ணாலை",
         },
         maternal: {
           relation: "Maternal Grandparents (மகள்வழி)",
@@ -90,7 +92,7 @@ export const weddingData = {
       "மேல் மலையனூர் அங்காள பரமேஸ்வரி துணை (Blessings of Melmalayanur Sri Angala Parameswari)",
     ],
     kural: {
-      tamil: "அன்பும் அறனும் உடைத்தாயின் இல்வாழ்க்கை\nபண்பும் பயனும் அது.",
+      tamil: "அன்பும் அறனும் உடைத்தாயின் இல்வாழ்க்கை\nபண்பும் பயனும் அது. (குறள்)",
       english: "If domestic life possesses love and virtue, that is both its graceful duty and its richest reward.",
       author: "Thiruvalluvar (Thirukkural)",
     },
@@ -104,6 +106,12 @@ export const weddingData = {
     { tamil: "தெய்வத்திரு. K. பாலா - B. காஞ்சனா", english: "Late K. Bala & Mrs. B. Kanchana" },
     { tamil: "M. கிருஷ்ணமூர்த்தி - K. ராதா", english: "Mr. M. Krishnamoorthi & Mrs. K. Radha" },
   ],
+  transitInfo: {
+    busRoutes: "62, 120F",
+    alightingStop: "Oragadam, Ambattur",
+    tamilBusRoutes: "பேருந்து வழித்தடம் எண் : 62, 120F",
+    tamilAlightingStop: "இறங்குமிடம் : ஒரகடம், அம்பத்தூர்",
+  },
   monogram: "P & P",
   weddingDate: "October 30, 2026",
   countdownTarget: "2026-10-30T06:00:00+05:30",

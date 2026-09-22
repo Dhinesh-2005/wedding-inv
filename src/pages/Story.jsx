@@ -18,7 +18,7 @@ export default function Story() {
       tamilTitle: "பெரியோர்களால் நிச்சயிக்கப்பட்ட மங்கள நன்மணம்",
       badge: "Vedic Astrology & Family Alliance",
       description:
-        "Rooted in Tamil cultural traditions and guided by family elders, the horoscopes of Priyadarshini and Parthipan were aligned with auspicious harmony under Vrischika Lagnam and Mrigashirsha Nakshatra, seeking the blessings of Sri Muneeswarar and Melmalayanur Angala Parameswari.",
+        "Rooted in Tamil cultural traditions and guided by family elders, the horoscopes of Priyadharshini and Parthipan were aligned with auspicious harmony under Vrischika Lagnam and Mrigashirsha Nakshatra, seeking the blessings of Sri Muneeswarar and Melmalayanur Angala Parameswari.",
       editableNote: "[Editable Placeholder: Add the personal story of when both families first visited each other's homes in Avadi & Ambattur]",
       icon: Sparkles,
     },
@@ -48,7 +48,7 @@ export default function Story() {
       tamilTitle: "சுபமுகூர்த்தம் & திருமண வரவேற்பு",
       badge: "The Sacred Vows",
       description:
-        "Morning wedding solemnized between 6:00 AM and 7:30 AM at Sri Thandayuthapani Swamy Murugar Temple, Veerapuram, Avadi, followed by a grand royal reception and banquet feast from 6:30 PM at Rajeswari Navaraj Mahal A/c, Ambattur.",
+        "Morning wedding solemnized between 6:00 AM and 7:30 AM at Sri Thandayuthapani Swamy Murugan Temple, Veerapuram, Avadi, followed by a grand royal reception and banquet feast from 6:30 PM at Rajeswari Navaraj Mahal A/c, Ambattur.",
       editableNote: null,
       icon: Heart,
     },
@@ -76,7 +76,7 @@ export default function Story() {
           <div className="flex items-center justify-center gap-2 mt-4 text-[#A67C2E]">
             <span className="h-[1px] w-8 bg-[#C9A24A]" />
             <span className="text-xs uppercase tracking-widest font-bold">
-              Priyadarshini & Parthipan
+              Priyadharshini & Parthipan
             </span>
             <span className="h-[1px] w-8 bg-[#C9A24A]" />
           </div>

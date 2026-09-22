@@ -52,7 +52,7 @@ export default function Family() {
         {/* Family Header Overview Card */}
         <div className="card-luxury bg-[#FFFDF7] p-6 sm:p-8 rounded-3xl border border-[#C9A24A]/30 shadow-md mb-12 text-center">
           <span className="text-xs uppercase tracking-widest text-[#A67C2E] font-bold">
-            {activeTab === "bride" ? "P. Priyadarshini's Lineage" : "M. Parthipan's Lineage"}
+            {activeTab === "bride" ? "P. Priyadharshini's Lineage" : "M. Parthipan's Lineage"}
           </span>
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-serif font-bold text-[#274236] mt-1">
             {currentFamily.title}

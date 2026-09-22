@@ -17,7 +17,7 @@ export function downloadICS({ title, description, location, startTime, endTime }
   const icsContent = [
     "BEGIN:VCALENDAR",
     "VERSION:2.0",
-    "PRODID:-//Priyadarshini & Parthipan Wedding//EN",
+    "PRODID:-//Priyadharshini & Parthipan Wedding//EN",
     "CALSCALE:GREGORIAN",
     "METHOD:PUBLISH",
     "BEGIN:VEVENT",
